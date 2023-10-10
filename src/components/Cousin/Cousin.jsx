@@ -1,12 +1,12 @@
 import React from 'react';
 import Friend from '../Friend/Friend';
 
-const Cousin = ({children,hasFriend}) => {
+const Cousin = ({children,hasFriend,ring}) => {
     return (
         <div>
             <h5>Cousin</h5>
             <p><small>{children}</small></p>
-            <Friend></Friend>
+            {hasFriend && <Friend ring={ring}></Friend>}
         </div>
     );
 };
